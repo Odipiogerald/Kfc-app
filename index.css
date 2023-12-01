@@ -1,0 +1,556 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    background-color: rgb(231, 23, 16);
+}
+.container{
+    display: table-row-group;
+    grid-template-columns: 250px 1fr 300px;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    overflow: hidden;
+    align-items: center;
+    justify-items: center;
+    font-weight: bolder;
+}
+#menu{
+    background: rgb(192, 40, 40)
+}
+.title{
+    padding: 30px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 1000px;
+
+}
+#menu img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    margin-top: -0px;
+    align-content: center;
+}
+.title p{
+    font-size: 600px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(241, 19, 19);
+    margin: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 10;
+}   
+.border{
+    width: 80px;
+    height: 4px;
+    margin: 3px 0;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    background: rgb(220, 63, 7);
+}
+
+.menu-item a{
+   
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 12px 0;
+    align-items: RIGHT;
+    color: rgb(11, 10, 10);
+    font-weight: 300;
+    justify-items: center;
+    
+}
+.menu-item a:hover{
+    background: rgb(10, 10, 10);
+}
+#food-items{
+    background: rgb(10, 10, 10);
+    overflow: auto;
+    height: calc(100vh - 86px);
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: sticky;
+    top: 0;
+    background: rgb(19, 19, 19);
+    z-index: 1;
+    text-align: center;
+}
+::-webkit-scrollbar{
+    display: YES;
+}
+#header .address{
+    font-size: 50px;
+    
+}
+#map{
+    font-size: 25px;
+    color: red;
+}
+.your-address{
+    border: 1px solid rgb(175, 19, 19);
+    color: rgb(141, 19, 19);
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.add-box i{
+    font-size: 20px;
+}
+
+#header select{
+    width: 150px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background: none;
+    color: rgb(123, 18, 18);
+    padding: 0 5px;
+    align-items: center;
+}
+.food-items{
+    display: none;
+}
+.cart-toggle{
+    display: block;
+}
+.util i,.user i{
+    font-size: 18px;
+    margin: 0 16px;
+    border: 1px solid rgb(220, 20, 20);
+    padding: 8px 16px;
+    color: crimson;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.util i:active{
+    color: rgb((215, 177, 8)6);
+    background: rgb((220, 20, 20), 20, 20);
+}
+#RICE,#FRIES,#ROLLS,#KFCDOUBLE,#BURGERS{
+    margin-top: 40px;   
+}
+#RICE #item-card,#RICE #item-card{
+    background: rgb(250, 251, 251);
+}
+#KFCDOUBLE #item-card,#BURGERS#item-card{
+    background: (rgb(253, 253, 254));
+}
+#category-name,.item-menu{
+    margin: 10px;
+    font-size: 35px;   
+    color: rgb(8, 8, 8);
+    font-family: 'Aclonica', sans-serif;
+}
+#item-card{
+    width: 180px;
+    height: 250px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    background: rgb(251, 251, 253);
+    cursor: pointer;
+   
+   text-align: center;
+}
+#item-card:hover img{
+    transform: scale(1.2);
+}
+#card-top{
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+}
+#rating{
+    padding: 7px;
+    color: rgb((164, 120, 8)91, 32);
+    background: rgb(149, 9, 9);
+    font-size: 14px;
+    border-radius: 15px;
+}
+.fa-heart-o{
+    padding: 6px;
+    border-radius: 50%;
+    background: rgb(151, 10, 10);
+    cursor: pointer;
+}
+.toggle-heart{
+background: orangered;
+color: rgb(249, 66, 66); 
+}
+#item-card img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    margin: auto;
+    display: table-row-group;
+    margin-bottom: 15px;
+    transition: 0.5s all ease-in-out;
+    align-items: center;
+}
+#item-name{
+    margin: 5px 0;
+    font-weight: 600;
+    color: rgb(196, 12, 12);
+    font-size: 18px;
+}
+#item-price{
+    margin: 0;
+    color: rgb(132, 26, 4);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.food-items{
+    display: none;
+}
+.cart-toggle{
+    display: none;
+}
+#cart-page{
+    background: rgb(229, 90, 90);
+    margin: 40px 10px;
+    margin-right: 50px;
+    padding: 20px 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+#cart-title{
+    font-size: 50px;
+    margin: 0;
+    color: indianred;
+}
+#cart-page table{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+#cart-page table thead td{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.cart-btn{
+    outline: none;
+    border: none;
+    background: crimson;
+    color: rgb(230, 95, 95);
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    bottom: 30px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+#cart-page table tbody td{
+    padding: 10px 0;
+    font-size: 20px;
+}
+#cart-page table tbody button{
+    outline: none;
+    border: none;
+    font-size: 16px;
+    background: none;
+    background: rgb(9, 0, 0);
+    color: rgb(11, 0, 0);
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+#cart-page table tbody img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+#checkout{
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 5px;
+    background: rgb(139, 76, 76);
+    padding: 10px 20px;
+}
+#checkout p{
+    margin: 15px 0;
+    float: left;
+}
+#total-price,#total-item{
+    font-size: 25px;
+    color: indianred;
+}
+#delievery{
+    font-size: 20px;
+    color: rgb(237, 245, 237);
+}
+#cart{
+    background: rgb(236, 239, 236);
+    padding-right: 30px;
+    overflow-y: scroll;
+}
+
+.item-menu{
+    margin: 0;
+    font-size: 30px;
+    margin-top: 40px;
+    color: rgb((185, 86, 10)41, 92);
+    background: rgb(248, 249, 248);
+    
+}
+.list-card{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+.list-card:hover{
+    background: rgb(187, 8, 8)
+}
+.list-card:hover img{
+    transition: 0.5s all ease-in-out;
+    transform: scale(1.2);
+}
+.list-card img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.list-name{
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(230, 233, 234);
+}
+.taste-header{
+    padding-top: 40px;
+    padding-bottom: 10px;
+    position: sticky;
+    top: 0;
+    background: rgb(14, 14, 14);
+}
+#mobile-view{
+    display: none;
+}
+#FRIES{
+    margin-top: 10px;
+}
+#m-total-amount{
+    display: none;
+}
+@media screen and (max-width : 800px) and (-webkit-min-device-pixel-ratio: 2){
+    .container{
+        display: none;
+    }
+    #mobile-view{
+        display: grid;
+        grid-template-rows: 120px 1fr 50px;
+        height: 100%;
+        overflow: hidden;
+        
+        width: 100vw;
+    }
+    .mobile-top{
+        padding: 5px 15px;
+        background: rgb(5, 5, 5);
+        z-index: 1;
+    }
+    .item-container{
+        overflow-y: scroll;
+    }
+    .logo-box,.top-menu{
+        display: flex;
+        justify-content: left;
+        align-items: left;
+    }
+    #logo{
+        width: 100px;
+        height: 100px;
+    }
+    .logo-box .your-address{
+        font-size: 18px;
+        width: 200px;
+        color: rgb(196, 24, 9);
+        text-transform: capitalize;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .top-menu{
+
+        color: rgb(11, 11, 11);
+    }
+    .top-menu i{
+        font-size: 50px;
+        cursor: pointer;
+        padding: 12px 5px ;
+        border-radius: 50%;
+    }
+    
+    .m-cart-toggle{
+        color: rgb(215, 99, 99);
+        background: lightcoral;
+    }
+    .category-header{
+        display: flex;
+        width: 100vw;
+        overflow-x: scroll;
+        position: sticky;
+        top: 0;
+        background: rgb(214, 111, 111);
+        z-index: 1;
+        border-bottom: 1px solid rgb(196, 94, 94);
+        margin: 0;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+    .toggle-category{
+        display: none;
+        position: relative;
+    }
+    .list-card{
+        margin: 0 10px;
+        text-align: center;
+    }
+    .list-card img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    .list-card:hover{
+        background: none;
+    }
+    .list-card:hover img{
+        transform: none;
+        transition: none;
+    }
+    .list-name{
+        margin: 5px 0;
+        color: coral;
+        width: max-content;
+        font-size: 16px;
+    }
+    #food-items{        
+        padding: 5px 10px;
+    }
+
+    .mobile-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 15px;
+        background: rgb(250, 252, 253);
+        border-top: 1px solid rgb(15, 15, 15)
+    }
+    .mobile-footer{
+        color: rgb(241, 243, 243);
+        text-transform: uppercase;
+        font-size: 16px;
+        position: static;
+    }
+    #category-name{
+        font-size: 25px;
+        font-family: 'Aclonica', sans-serif;
+    }
+    #item-card{
+        width: 150px;
+        height: 200px;
+    }
+    #item-card img{
+        width: 100px;
+        height: 100px;
+    }
+    #item-name,#item-price{
+        font-size: 16px;
+    }
+    .list-card{
+        flex-direction: column;
+    }
+    #cart-page{
+        margin: 3px 0;
+        padding: 10px 5px;
+        padding-bottom: 30px;
+        border-top: 1px solid rgb(210, 103, 103);
+    }
+    #cart-page table thead td{
+        font-size: 20px;
+    }
+    #cart-page table tbody td{
+        font-size: 18px;
+    }
+    #cart-page table tbody img{
+        width: 60px;
+        height: 60px;
+    }
+    #cart-title{
+        font-size: 25px;
+        display: inline-block;
+        font-family: 'Aclonica', sans-serif;
+    }
+    #m-total-amount{
+        display: inline-block;
+        color: lightcoral;
+        padding: 5px 10px;
+        margin: 0;
+        border:  1px solid lightcoral;
+    }
+    .cart-btn{
+        font-size: 14px;
+        background: lightcoral;
+        padding: 8px 15px;
+        margin: auto;
+    }
+    .btn-box{
+        text-align: center;
+    }
+}
+@media screen and (max-width : 400px) and (-webkit-min-device-pixel-ratio: 2){
+    #mobile-view{
+        min-height: -webkit-fill-available;
+    }
+    #item-card{
+        height: 200px;
+        width: 140px;
+    }
+    #food-items{
+        padding: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
